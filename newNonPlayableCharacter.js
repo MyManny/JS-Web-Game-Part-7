@@ -4,7 +4,7 @@ function newNonPlayableCharacter(x, y) {
     
     let direction = null;
 
-    function moveCharacter() {
+    async function moveCharacter() {
         if (direction === 'west') {
             x -= 1
         }
@@ -56,4 +56,10 @@ function newNonPlayableCharacter(x, y) {
         walkSouth: walkSouth,
         stop: stop
     }
+    function sleep(time){
+        return new Promise(resolve => {
+            setTimeout(resolve, time)
+        })  
+    }
+    
 }
